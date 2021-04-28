@@ -1,0 +1,1 @@
+# playshop_static
