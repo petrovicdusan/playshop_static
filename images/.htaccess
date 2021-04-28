@@ -1,0 +1,24 @@
+RewriteEngine On
+Options -Indexes
+
+# bez direktnog pristupa originalnim fajlovima
+RewriteRule ^original/.*$ [L,R=404]
+
+# File exists ----------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -l
+RewriteRule . - [L]
+
+# Original image does exist ----------------------------------------------------------------
+RewriteCond %{REQUEST_URI} ^/images/thumbs/(items|advertizers|personal_ads)/([0-9x]+[ABCD](([A-Z][A-Z](\d+(\.\d+)?,?)*)*)|original)/(.*)$
+# %1 - image type (family), %7 - image path relative to original directory
+RewriteCond %{DOCUMENT_ROOT}/images/original/%1/%7 -s
+RewriteRule ^.*$ /index.php [NC,L]
+
+# Original image doesn't exist --------------------------------------------------------
+
+RewriteCond %{REQUEST_URI} ^/images/thumbs/(items|advertizers|personal_ads)/([0-9x]+[ABCD](([A-Z][A-Z](\d+(\.\d+)?,?)*)*)|original)/(.*)$
+RewriteCond %{DOCUMENT_ROOT}/images/original/%1/%7 !-s
+RewriteRule ^.*$ /images/thumbs/%1/%2/default.jpg [R,L]
+
