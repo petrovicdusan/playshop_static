@@ -1,0 +1,79 @@
+body::before {
+    content: "Responsive tablet portrait";
+}
+
+#sizer{
+    padding-top: 0px;
+
+
+
+}
+.wrapper1{
+
+
+
+}
+.headerUserActionsWrapper{
+    padding: 20px 10px 0px 40px;
+
+
+}
+.headerLinksWrapper{
+    display: block;
+    width: 500px;
+    padding: 120px;
+}
+
+
+
+.headerLinksWrapperContainer ul li{
+  padding: 24px 0px 15px 45px;
+  width: 140px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.headerLinksWrapperContainer.headerLinksLeftWrapper {
+    background-color: #000;
+    display: none;
+    float: none;
+    left: 0;
+    position: absolute;
+    top: 38px;
+    width: 190px;
+}
+.topLinksWrapper{
+  font-size: 15px;
+  padding-left: 20px:
+
+}
+.headerLinksWrapper {
+    display: block;
+    width: 190px;
+    padding: 120px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  #site-menu{
+
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+.topLinksWrapper{
+  height: 45px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+    box-sizing: border-box;
+    display: block;
+    width: 32px;
+    height: 4px;
+    border-radius: 1px;
+    padding: 15px, 18px;
+  }
+  .headerLinksWrapperContainer.headerLinksRightWrapper .countryAndLanguageWrapper {
+      float: left;
+      display: inline-block;
+      padding: 8px 0 0 0;
+  }

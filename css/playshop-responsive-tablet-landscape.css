@@ -1,0 +1,12 @@
+body::before {
+    content: "Responsive tablet landscape";
+}
+#sizer {
+    width: 100%;
+    max-width: initial;
+}
+#expander {
+    margin: 0;
+    padding: 0;
+}
+
